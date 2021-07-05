@@ -14,17 +14,17 @@ class AirportInfo extends Seeder
      */
     public function run()
     {
-        DB::table('airport_Infos')->insert([
+        DB::table('airport_infos')->insert([
             'name' => 'Head Office'
         ]);
-        DB::table('airport_Infos')->insert([
+        DB::table('airport_infos')->insert([
             'name' => 'Christchurch'
         ]);
-        DB::table('airport_Infos')->insert([
+        DB::table('airport_infos')->insert([
             'name' => 'Hamilton'
         ]);
 
-        DB::table('airport_Infos')->insert([
+        DB::table('airport_infos')->insert([
             'name' => 'Auckland'
         ]);
     }
