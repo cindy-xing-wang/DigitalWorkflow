@@ -7,7 +7,6 @@
 <div class="page-header-title">
     <i class="ik ik-layers bg-blue"></i>
     <div class="d-inline">
-        {{-- <h5>List of Real Healthy Me Staff</h5> --}}
         <span>Staff information</span>
     </div>
 </div>
@@ -47,7 +46,6 @@
                         <td>{{$staff->airport->name}}</td>
                         <td>{{$staff->role->name}}</td>
                         <td>{{$staff->name}}</td>
-                        {{-- <td><img src="{{asset('images')}}/{{$staff->image}}" class="table-user-thumb" alt=""></td> --}}
                         <td>{{$staff->email}}</td>
                         <td>{{$staff->phone}}</td>
                         <td>

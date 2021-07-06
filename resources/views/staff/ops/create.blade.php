@@ -23,7 +23,6 @@
         </div>
     @endif
 
-    {{-- <span><strong>Airport name:</strong>  {{App\Models\AirportInfo::where('id', '=', Auth::user()->airportId)->get()}} </span><br> --}}
     <span><strong>Airport name:</strong>  {{Auth::user()->airport->name}} </span><br>
 <div class="card">
     <div class="card-body">
@@ -164,10 +163,6 @@
                     </div>
                     <div>
                     </div>
-                    {{-- <div>
-                        <input type="checkbox" id="preFlight" name="chooseChecklist" value="postFlight">
-                        <label for="postFlight">staff2</label>
-                    </div> --}}
                 </div>
             </div>
             </div>

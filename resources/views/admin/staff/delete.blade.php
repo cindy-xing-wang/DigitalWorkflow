@@ -8,7 +8,7 @@
             <div class="page-header-title">
                 <i class="ik ik-edit bg-blue"></i>
                 <div class="d-inline">
-                    <h5>Pyper Vision</h5>
+                    <h5>Head Office</h5>
                     <span>Delete staff</span>
                 </div>
             </div>

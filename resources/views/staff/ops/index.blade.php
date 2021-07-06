@@ -8,7 +8,6 @@
     <i class="ik ik-calendar bg-blue"></i>
     <div class="d-inline">
         <h5>Calendars</h5>
-        {{-- <span>Staff information</span> --}}
     </div>
 </div>
 </div>

@@ -8,7 +8,7 @@
             <div class="page-header-title">
                 <i class="ik ik-edit bg-blue"></i>
                 <div class="d-inline">
-                    <h5>Pyper Vision</h5>
+                    <h5>Head Office</h5>
                     <span>Update staff info</span>
                 </div>
             </div>
@@ -31,7 +31,7 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<label for="">Full name</label>
-					<input type="text" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="doctor name" value="{{$staff->name}}">
+					<input type="text" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="Staff name" value="{{$staff->name}}">
                     @error('name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -50,15 +50,6 @@
 			</div>
 
 			<div class="row">
-				{{-- <div class="col-lg-6">
-					<label for="">Password (leave it blank if you do not want to change it)</label>
-					<input type="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="password">
-                     @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-				</div> --}}
 
                 <div class="col-md-6">
                     <div class="form-group">
@@ -78,13 +69,13 @@
             <div class="row">
                     <div class="col-md-6">
                         <label>Role</label>
-                        <select name="roleId" class="form-control @error('roleId') is-invalid @enderror">
+                        <select name="role_id" class="form-control @error('role_id') is-invalid @enderror">
                             <option value="">Please select a role</option>
-                            @foreach (App\Models\Role::where('id', '>=', Auth::user()->roleId)->get() as $role)
-                                <option value="{{$role->id}}" @if($staff->roleId==$role->id)selected @endif>{{$role->name}}</option>
+                            @foreach (App\Models\Role::where('id', '>=', Auth::user()->role_id)->get() as $role)
+                                <option value="{{$role->id}}" @if($staff->role_id==$role->id)selected @endif>{{$role->name}}</option>
                             @endforeach
                         </select>
-                         @error('roleId')
+                         @error('role_id')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -94,21 +85,19 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="">Select an airport</label>
-                            <select name="airportId" class="form-control @error('airportId') is-invalid @enderror">
+                            <select name="airport_id" class="form-control @error('airport_id') is-invalid @enderror">
                                 <option value="">Please select an airport</option>
-                                {{-- if role is selected as sub-admin, airport name cannot be Admin --}}
-                                @if (Auth::user()->roleId==1)
-                                    @foreach (App\Models\AirportInfo::where('id', '>=', Auth::user()->airportId)->get() as $airport)
-                                        <option value="{{$airport->id}}" @if($staff->airportId==$airport->id)selected @endif>{{$airport->name}}</option>
+                                @if (Auth::user()->role_id==1)
+                                    @foreach (App\Models\AirportInfo::where('id', '>=', Auth::user()->airport_id)->get() as $airport)
+                                        <option value="{{$airport->id}}" @if($staff->airport_id==$airport->id)selected @endif>{{$airport->name}}</option>
                                     @endforeach
                                 @else
-                                    @foreach (App\Models\AirportInfo::where('id', '=', Auth::user()->airportId)->get() as $airport)
-                                        <option value="{{$airport->id}}" @if($staff->airportId==$airport->id)selected @endif>{{$airport->name}}</option>
+                                    @foreach (App\Models\AirportInfo::where('id', '=', Auth::user()->airport_id)->get() as $airport)
+                                        <option value="{{$airport->id}}" @if($staff->airport_id==$airport->id)selected @endif>{{$airport->name}}</option>
                                     @endforeach
                                     
                                 @endif
                                 </select> 
-                            {{-- <input type="text" name="airportName" class="form-control @error('airportName') is-invalid @enderror"> --}}
                                     @error('airportName')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -122,7 +111,6 @@
             <a href="{{route('staffs.index')}}" class="btn btn-light">
                 Cancel
             </a>
-            {{-- <button class="btn btn-light">Cancel</button> --}}
 
 
 				</form>

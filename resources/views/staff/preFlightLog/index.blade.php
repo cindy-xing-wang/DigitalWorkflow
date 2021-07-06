@@ -39,18 +39,9 @@
         {{-- </form> --}}
             <br>
             <p></p>
-            {{-- <p><strong>Pre-flight issues</strong></p>
-            <div id="issue">
-                <input type="checkbox" name="part1" value=1>
-                <label for=""> Faulty 1</label><br>
-                <input type="checkbox" name="part2" value=2>
-                <label for=""> Faulty 2</label><br>
-                <input type="checkbox" name="part3" value=3>
-                <label for=""> Others</label><br>
-            </div> --}}
             <div class="form-group">
                 <label for="exampleTextarea1">Log Note</label>
-                <textarea class="form-control" id="exampleTextarea1" rows="4"name="logNote">{{ old('logNote') }}</textarea>
+                <textarea class="form-control" id="exampleTextarea1" rows="4"name="logNote">{{ old('lognote') }}</textarea>
             </div>
             <button type="submit" class="btn btn-primary mr-2">Next</button>
         </form>

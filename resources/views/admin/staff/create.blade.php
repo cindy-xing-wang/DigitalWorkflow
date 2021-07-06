@@ -102,7 +102,6 @@
                         <label for="">Select an airport</label>
                         <select name="airport_id" class="form-control @error('airport_id') is-invalid @enderror">
                             <option value="">Please select an airport</option>
-                            {{-- if role is selected as sub-admin, airport name cannot be Admin --}}
                             @if (Auth::user()->role_id==1)
                                 @foreach (App\Models\AirportInfo::where('id', '>=', Auth::user()->airport_id)->get() as $airport)
                                     <option value="{{$airport->id}}">{{$airport->name=='Admin'? 'Pyper Vision':$airport->name}}</option>
