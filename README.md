@@ -123,6 +123,7 @@ Go to the roles migration file in database/migrations folder to update the file 
 
 Run migration as we did before and the roles table is created in the database.
 ![Roles table](/img/12-11-7.userMigration.PNG)
+
 *Create a Role Model-3*
 
 ### Seeding the data into roles table
@@ -140,6 +141,7 @@ php artisan make:seeder Role
 *Create a Role.php file-1*
 
 ![Roles table](/img/12-11-9.userMigration.PNG)
+
 *Create a Role.php file-2*
 
 Update the Role.php file as below and run seeding command. The data will be seeded into roles table.
@@ -152,7 +154,9 @@ php artisan db:seed --class Role
 ![Roles table](/img/12-11-10.userMigration.PNG)
 *Create a Role Model-3*
 
+
 ![Roles table](/img/12-11-11.userMigration.PNG)
+
 *Create a Role Model-3*
 
 ### Create the relationship between users and roles
@@ -199,7 +203,7 @@ The master.blade.php looks like this.
 ![master.php file](/img/12-12.master.PNG)
 *master.php file*
 
-![master.php file](/img/12-13-1.staffController.PNG)
+![Add StaffController to the route](/img/12-13-1.staffController.PNG)
 *Add StaffController to the route*
 
 ![create a middleware](/img/12-14.middleware.PNG)
