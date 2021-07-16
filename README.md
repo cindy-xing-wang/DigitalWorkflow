@@ -58,7 +58,8 @@ npm install && npm run dev
 ```
 
 Go to the browser to check it out!
-![localhost](/img/12-9-1.localhost.PNG)
+![localhost](/img/12-9-1.localhost.PNG)  
+
 *The web is working on localhost-1*
 
 ![localhost](/img/12-9-2.localhost.PNG)
@@ -67,6 +68,7 @@ Go to the browser to check it out!
 ### Change home page to login page
 Update the web.php file. Change the home page to login page.
 ![web.php](/img/12-10-1.routelogin.PNG)
+
 *Update web.php*
 
 ![web.php](/img/12-10-2.routelogin.PNG)
@@ -89,6 +91,7 @@ Run migration
 
 After running migration, we should see the users table being created in the database.
 ![Users table](/img/12-11-3.userMigration.PNG)
+
 *Users table-1*
 
 ![Users table](/img/12-11-4.userMigration.PNG)
@@ -99,6 +102,7 @@ Now, we can continue on create more models.
 Create the Role Model first.
 ![Users table](/img/12-11-5.userMigration.PNG)
 *Role Model*
+
 When adding the "-m" tag, the command will create a migration at the same time.
 
 ## License
