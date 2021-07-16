@@ -86,6 +86,12 @@ Go to the database/migrations folder and update the users table as below
 *Update the users table*
 
 Run migration
+
+```
+# bash
+php artisan migrate
+```
+
 ![migration](/img/12-11-2.userMigration.PNG)
 *Run migration*
 
@@ -97,13 +103,107 @@ After running migration, we should see the users table being created in the data
 ![Users table](/img/12-11-4.userMigration.PNG)
 *Users table-2*
 
-### Role Model
+### Create a Role Model
 Now, we can continue on create more models.
 Create the Role Model first.
-![Users table](/img/12-11-5.userMigration.PNG)
-*Role Model*
+
+```
+# bash
+php artisan make:model Role -m
+```
+
+![Roles table](/img/12-11-5.userMigration.PNG)
+*Create a Role Model-1*
 
 When adding the "-m" tag, the command will create a migration at the same time.
+
+Go to the roles migration file in database/migrations folder to update the file as below.
+![Roles table](/img/12-11-6.userMigration.PNG)
+*Create a Role Model-2*
+
+Run migration as we did before and the roles table is created in the database.
+![Roles table](/img/12-11-7.userMigration.PNG)
+*Create a Role Model-3*
+
+### Seeding the data into roles table
+Let's seed some data into the roles table. There are 3 roles in the app: admin, sub-admin, and staff role.
+
+We can create the Role.php file first in the database/seeders folder.
+
+
+```
+# bash
+php artisan make:seeder Role
+```
+
+![Roles table](/img/12-11-8.userMigration.PNG)
+*Create a Role.php file-1*
+
+![Roles table](/img/12-11-9.userMigration.PNG)
+*Create a Role.php file-2*
+
+Update the Role.php file as below and run seeding command. The data will be seeded into roles table.
+
+```
+# bash
+php artisan db:seed --class Role
+```
+
+![Roles table](/img/12-11-10.userMigration.PNG)
+*Create a Role Model-3*
+
+![Roles table](/img/12-11-11.userMigration.PNG)
+*Create a Role Model-3*
+
+### Create the relationship between users and roles
+We need to update the users migration file to add the relationship between users and roles. Every user is going to have only one role.
+
+```
+# bash
+php artisan make:migration add_role_to_users_table --table=users
+```
+
+![Users table](/img/12-11-12.userMigration.PNG)
+*Create the relationship between users and roles*
+
+![Users table](/img/12-11-13.userMigration.PNG)
+*Create the relationship between users and roles*
+
+### Create the Airport Model and migration file
+The process is the same as we created roles table before. We also need to add the relationship between users and airpots.The user now have a role_id, and an airport_id to define where the user comes from and what permissions the user can have.
+
+![Users table](/img/12-11-14.userMigration.PNG)
+*Create the relationship between users and airports*
+
+### Seeding sample users to the users table
+We need some sample users to be able to login to the web at the beginning as the registration function is not required by the client.
+
+![Users table](/img/12-11-15.userMigration.PNG)
+*Seeding the sample users*
+Remember to import Hash to the seeders/User.php file.
+
+Now, we can try to  login the sample users.
+
+![Users table](/img/12-11-16.userMigration.PNG)
+*Login as an admin role*
+
+![Users table](/img/12-11-17.userMigration.PNG)
+*Login as an admin role*
+
+### Controllers and Views
+It is time to work on the controllers and views.
+
+Add the files to resources/views/admin/layouts folder.
+
+The master.blade.php looks like this.
+![master.php file](/img/12-12.master.PNG)
+*master.php file*
+
+![master.php file](/img/12-13-1.staffController.PNG)
+*Add StaffController to the route*
+
+![create a middleware](/img/12-14.middleware.PNG)
+*Create a middleware*
 
 ## License
 
