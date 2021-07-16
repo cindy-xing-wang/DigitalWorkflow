@@ -15,7 +15,7 @@ Let’s start now!
 
 ### Create a new Laravel Project
 
-Create a new Laravel Project in htdocs folder.
+**Create a new Laravel Project in htdocs folder.**
 
 ```
 # bash
@@ -24,7 +24,7 @@ laravel new DigitalWorkflow
 ![Open the project with VS code](/img/12-2.openProjectVScode.PNG)
 *Open the project with VS code*
 
-Update configuration and enviroment files
+**Update configuration and enviroment files**
 
 ![Initial settings](/img/12-3.initSetting.PNG)
 *Initial settings-1*
@@ -35,16 +35,17 @@ Update configuration and enviroment files
 ![Initial settings](/img/12-5.timezone.PNG)
 *Initial settings-3*
 
-Connect with Database
+**Connect with Database**
 ![Connect with Database](/img/12-6.dbSetting.PNG)
 *Connect with Database*
 
-Create a Database
+**Create a Database**
+
 ![Create with Database](/img/12-7.createDB.PNG)
 
 *Create with Database*
 
-Require laravel/ui, bootstrap auth for authentication function
+**Require laravel/ui, bootstrap auth for authentication function**
 ![Require laravel/ui](/img/12-8-1.instalUI.PNG)
 *Require laravel/ui*
 
