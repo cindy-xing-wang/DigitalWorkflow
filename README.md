@@ -21,7 +21,7 @@ Create a new Laravel Project in htdocs folder.
 # bash
 laravel new DigitalWorkflow
 ```
-![Open the project with VS code](img\12-2.openProjectVScode.PNG)
+![Open the project with VS code](\img\12-2.openProjectVScode.PNG)
 *Open the project with VS code*
 
 Run npm install && npm run dev **TWICE** to get the authentication UI scaffolding built properly.
