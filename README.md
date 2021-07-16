@@ -59,7 +59,7 @@ Run npm install && npm run dev **TWICE** to get the authentication UI scaffoldin
 npm install && npm run dev
 ```
 
-Go to the browser to check it out!
+**Go to the browser to check it out!**
 ![localhost](/img/12-9-1.localhost.PNG)  
 
 *The web is working on localhost-1*
@@ -68,7 +68,8 @@ Go to the browser to check it out!
 *The web is working on localhost-2*
 
 ### Change home page to login page
-Update the web.php file. Change the home page to login page.
+**Update the web.php file. Change the home page to login page.**
+
 ![web.php](/img/12-10-1.routelogin.PNG)
 
 *Update web.php*
@@ -76,7 +77,8 @@ Update the web.php file. Change the home page to login page.
 ![web.php](/img/12-10-2.routelogin.PNG)
 *Update web.php*
 
-Refresh the browser again and you should see the login page is set as the home page.
+**Refresh the browser again and you should see the login page is set as the home page.**
+
 ![login](/img/12-10-3.routelogin.PNG)
 *Login page*
 
@@ -97,7 +99,8 @@ php artisan migrate
 ![migration](/img/12-11-2.userMigration.PNG)
 *Run migration*
 
-After running migration, we should see the users table being created in the database.
+**After running migration, we should see the users table being created in the database.**
+
 ![Users table](/img/12-11-3.userMigration.PNG)
 
 *Users table-1*
@@ -124,6 +127,7 @@ Go to the roles migration file in database/migrations folder to update the file 
 *Create a Role Model-2*
 
 Run migration as we did before and the roles table is created in the database.
+
 ![Roles table](/img/12-11-7.userMigration.PNG)
 
 *Create a Role Model-3*
