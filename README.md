@@ -60,6 +60,7 @@ npm install && npm run dev
 ```
 
 **Go to the browser to check it out!**
+
 ![localhost](/img/12-9-1.localhost.PNG)  
 
 *The web is working on localhost-1*
@@ -201,9 +202,7 @@ Now, we can try to  login the sample users.
 *Login as an admin role*
 
 ### Controllers and Views
-It is time to work on the controllers and views.
-
-Add the files to resources/views/admin/layouts folder.
+It is time to work on the controllers and views. Add the files to resources/views/admin/layouts folder.
 
 The master.blade.php looks like this.
 ![master.php file](/img/12-12.master.PNG)
