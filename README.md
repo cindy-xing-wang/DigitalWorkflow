@@ -68,8 +68,8 @@ npm install && npm run dev
 ![localhost](/img/12-9-2.localhost.PNG)
 *The web app is working on localhost*
 
-### Change home page to login page
-**Update the web.php file. Change the home page to login page.**
+### Change home route to login page
+**Update the web.php file. Change the home route to login page.**
 
 ![web.php](/img/12-10-1.routelogin.PNG)
 
@@ -78,7 +78,7 @@ npm install && npm run dev
 ![web.php](/img/12-10-2.routelogin.PNG)
 *Update web.php*
 
-**Refresh the browser again and you should see the login page is set as the home page.**
+**Refresh the browser again and you should see the login page is set as the home route.**
 
 ![login](/img/12-10-3.routelogin.PNG)
 *Login page*
