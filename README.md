@@ -24,6 +24,32 @@ laravel new DigitalWorkflow
 ![Open the project with VS code](/img/12-2.openProjectVScode.PNG)
 *Open the project with VS code*
 
+Update configuration and enviroment files
+
+![Initial settings](/img/12-3.initSetting.PNG)
+*Initial settings-1*
+
+![Initial settings](/img/12-4.env.PNG)
+*Initial settings-2*
+
+![Initial settings](/img/12-5.timezone.PNG)
+*Initial settings-3*
+
+Connect with Database
+![Connect with Database](/img/12-6.dbSetting.PNG)
+*Connect with Database*
+
+Create a Database
+![Create with Database](/img/12-7.createDB.PNG)
+*Create with Database*
+
+Require laravel/ui, bootstrap auth for authentication function
+![Require laravel/ui](/img/12-8-1.instalUI.PNG)
+*Require laravel/ui*
+
+![Require bootatrap auth](/img/12-8-2.instalUI.PNG)
+*Require bootatrap auth*
+
 Run npm install && npm run dev **TWICE** to get the authentication UI scaffolding built properly.
 
 ```
@@ -31,7 +57,49 @@ Run npm install && npm run dev **TWICE** to get the authentication UI scaffoldin
 npm install && npm run dev
 ```
 
+Go to the browser to check it out!
+![localhost](/img/12-9-1.localhost.PNG)
+*The web is working on localhost-1*
+
+![localhost](/img/12-9-2.localhost.PNG)
+*The web is working on localhost-2*
+
 ### Change home page to login page
+Update the web.php file. Change the home page to login page.
+![web.php](/img/12-10-1.routelogin.PNG)
+*Update web.php*
+
+![web.php](/img/12-10-2.routelogin.PNG)
+*Update web.php*
+
+Refresh the browser again and you should see the login page is set as the home page.
+![login](/img/12-10-3.routelogin.PNG)
+*Login page*
+
+### Migrations
+Even though Laravel UI provides the basic authentication function, we still need to change the code a little bit to make it suit our case. I will start from user’s migration file.
+
+Go to the database/migrations folder and update the users table as below
+![user](/img/12-11-1.userMigration.PNG)
+*Update the users table*
+
+Run migration
+![migration](/img/12-11-2.userMigration.PNG)
+*Run migration*
+
+After running migration, we should see the users table being created in the database.
+![Users table](/img/12-11-3.userMigration.PNG)
+*Users table-1*
+
+![Users table](/img/12-11-4.userMigration.PNG)
+*Users table-2*
+
+### Role Model
+Now, we can continue on create more models.
+Create the Role Model first.
+![Users table](/img/12-11-5.userMigration.PNG)
+*Role Model*
+When adding the "-m" tag, the command will create a migration at the same time.
 
 ## License
 
