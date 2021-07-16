@@ -63,10 +63,10 @@ npm install && npm run dev
 
 ![localhost](/img/12-9-1.localhost.PNG)  
 
-*The web is working on localhost-1*
+*The web app is working on localhost*
 
 ![localhost](/img/12-9-2.localhost.PNG)
-*The web is working on localhost-2*
+*The web app is working on localhost*
 
 ### Change home page to login page
 **Update the web.php file. Change the home page to login page.**
