@@ -6,12 +6,11 @@ The documentation will demonstrate how I built and deployed this app.
 
 ## Background
 
-One use case for this project is a commercial drone company wants to rent their products to different airports and they need to provide a standard procedure for the users flying a drone by filling a form and a pre-flight checklist. The form includes some basic information (the weather, drone model, pilot name, etc.) for each flight. The checklist provides some standard instructions for checking the drone before anyone can operate it. The main purpose of this project is enabling the company to manage the workflow of operating the drone. Those form and checklist will be saved into a database for later when people need to trace back to see what happened during that operation.
+One use case for this project is a commercial drone company that wants to rent their products to different airports and they need to provide a standard procedure for the users flying a drone by filling a form and a pre-flight checklist. The form includes some basic information (the weather, drone model, pilot name, etc.) for each flight. The checklist provides some standard instructions for checking the drone before anyone can operate it. The main purpose of this project is to enable the company to manage the workflow of operating the drone. Those forms and checklists will be saved into a database for later when people need to trace back to see what happened during that operation.
 
 ## The design process
 
-Before I dive into the details, I will talk about the main logic. I will create a Laravel app skeleton and connect with database (MySQL). I used XAMMP as it is widely used for PHP projects. For each feature, I will create Models and migrations. After migrating the models into database, we will have the tables created. Then, I will create controllers and views. Repeat the same process for the next feature. It is a long way to go, please be patient.
-Let’s start now!
+Before I dive into the details, I will talk about the main logic. I will create a Laravel app skeleton and connect it with a database (MySQL). I used XAMMP as it is widely used for PHP projects. For each feature, I will create Models and migrations. After migrating the models into the database, we will have the tables created. Then, I will create controllers and views. Repeat the same process for the next feature. It is a long way to go, please be patient. Let’s start now!
 
 ### Create a new Laravel Project
 
@@ -84,7 +83,7 @@ npm install && npm run dev
 *Login page*
 
 ### Migrations
-Even though Laravel UI provides the basic authentication function, we still need to change the code a little bit to make it suit our case. I will start from user’s migration file.
+Even though Laravel UI provides the basic authentication function, we still need to change the code a little bit to make it suit our case. I will start from the user’s migration file.
 
 Go to the database/migrations folder and update the users table as below
 ![user](/img/12-11-1.userMigration.PNG)
@@ -167,7 +166,7 @@ php artisan db:seed --class Role
 *Create a Role Model-3*
 
 ### Create the relationship between users and roles
-We need to update the users migration file to add the relationship between users and roles. Every user is going to have only one role.
+We need to update the users' migration file to add the relationship between users and roles. Every user is going to have only one role.
 
 ```
 # bash
@@ -181,13 +180,13 @@ php artisan make:migration add_role_to_users_table --table=users
 *Create the relationship between users and roles*
 
 ### Create the Airport Model and migration file
-The process is the same as we created roles table before. We also need to add the relationship between users and airpots.The user now have a role_id, and an airport_id to define where the user comes from and what permissions the user can have.
+The process is the same as we created the roles table before. We also need to add the relationship between users and airports. The user now has a role_id, and an airport_id defines where the user comes from and what permissions the user can have.
 
 ![Users table](/img/12-11-14.userMigration.PNG)
 *Create the relationship between users and airports*
 
 ### Seeding sample users to the users table
-We need some sample users to be able to login to the web at the beginning as the registration function is not required by the client.
+We need some sample users to be able to log in to the web at the beginning as the registration function is not required by the client.
 
 ![Users table](/img/12-11-15.userMigration.PNG)
 *Seeding the sample users*
